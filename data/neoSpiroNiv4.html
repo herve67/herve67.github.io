@@ -70,7 +70,7 @@ footer {
   <li id="prop5"></li>
 </ul>   
 
-<p >Lancé de dé</p>
+<h3 >Lancé de dé :</h3>
 
 <p id="iD"></p>
 
@@ -78,24 +78,30 @@ footer {
 
 <button type="button" onclick="reponse()">réponse</button>
 
-<p id="reponse"></p>
+<p id="reponse"></p><br><br><br><br><br>
 
 
+<button type="button"  onclick="reglesJeu()" >Afficher les règles du jeu</button>
+
+<p id="regles"></p>
 
 
 
 <footer>
 
 
+ <p style="text-align:center;"><a href="https://github.com/herve67/herve67.github.io">à propos de néoSpiro</a></p>
 
-  <button>en travaux</button>
-  <p style="text-align:center;"><a href="https://github.com/herve67/herve67.github.io">à propos de néoSpiro</a></p>
-
-
+ 
 </footer>
 
 <script>
+var reglesData = "tous les joueurs sont au départ au centre de la spirale (<a href=spiro.png>img</a>).ils répondent à tour de rôle à une question. Quand la réponse est exacte, ils peuvent avancer d'un nombre de case équivalent à la valeur du dé.le but est de sortir le premier de la spiraleles étoiles, les cercles, les carrés et les losanges représentent respectivement un univers.chaque joueur se voit attribué un univers en début de partie.suite à une bonne réponse, le joueur responsable de la case d'arrivée doit raconter la suite de l'histoire débutée par les autres joueurs.chaque nouvelle partie est le début d'une nouvelle histoire.vous pouvez inventer des règles différentes que celles-ci ainsi qu'utiliser un support de jeu différent d'un parcours en spirale.Il n’est pas nécessaire d’être connecté pour utiliser néoSpiro. Dans ce cas il faut utiliser une version  préalablement enregistrée du fichier neoSpiroNiv4.html";
 
+function reglesJeu() {
+  document.getElementById("regles").innerHTML = reglesData ;
+//  https://www.pierre-giraud.com/afficher-cacher-div-javascript/
+}
 
 //shuffle(array) voir https://bost.ocks.org/mike/shuffle/
 
